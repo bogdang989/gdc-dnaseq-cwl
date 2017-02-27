@@ -557,7 +557,7 @@ steps:
       - id: SORTED_OUTPUT
 
   - id: metrics_pe
-    run: metrics.cwl
+    run: subwork/metrics.cwl
     scatter: bam
     in:
       - id: bam
@@ -590,7 +590,7 @@ steps:
       - id: log
 
   - id: metrics_se
-    run: metrics.cwl
+    run: subwork/metrics.cwl
     scatter: bam
     in:
       - id: bam
@@ -741,7 +741,7 @@ steps:
       - id: sqlite
 
   - id: metrics_markduplicates
-    run: mixed_library_metrics.cwl
+    run: subwork/mixed_library_metrics.cwl
     in:
       - id: bam
         source: picard_markduplicates/OUTPUT
@@ -759,7 +759,7 @@ steps:
       - id: merge_sqlite_destination_sqlite
 
   - id: integrity
-    run: integrity.cwl
+    run: subwork/integrity.cwl
     in:
       - id: bai_path
         source: picard_markduplicates/OUTPUT
