@@ -12,7 +12,7 @@ inputs:
     type: File
     inputBinding:
       loadContents: true
-      valueFrom: null
+      valueFrom: ""
 
 outputs:
   - id: output

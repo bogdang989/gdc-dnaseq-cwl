@@ -29,13 +29,13 @@ inputs:
     type: File
     inputBinding:
       loadContents: true
-      valueFrom: null
+      valueFrom: ""
 
   - id: fastqc_json_path
     type: File
     inputBinding:
       loadContents: true
-      valueFrom: null
+      valueFrom: ""
 
   - id: thread_count
     type: int
